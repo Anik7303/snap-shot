@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+    color: currentColor;
+}
+
+#icon {
+    width: 2rem;
+    height: 2rem;
+    color: currentColor;
+    background-color: transparent;
+}

@@ -1,0 +1,27 @@
+.footer {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 1.4rem;
+    width: 100%;
+    color: #ffffff;
+    background-color: #222222;
+
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+%common {
+    margin: 1rem;
+}
+
+.author {
+    @extend %common;
+    font-style: italic;
+}
+
+.copyright {
+    @extend %common;
+}

@@ -4,13 +4,14 @@
 
     display: grid;
     grid-template-rows: minmax(min-content, 6rem) 1fr minmax(min-content, 3rem);
-    justify-content: center;
+    justify-content: stretch;
 }
 
-.main {
-    width: 100%;
-    min-width: 90rem;
+.container,
+.header-container,
+.footer-container {
     max-width: 120rem;
+    margin: 0 auto;
 }
 
 %heading-common {

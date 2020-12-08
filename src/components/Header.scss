@@ -1,0 +1,39 @@
+.header {
+    width: 100%;
+    height: 100%;
+
+    &-container {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__brand {
+        font-size: 3rem;
+        font-family: "Lobster Two", monospace;
+    }
+    &__link {
+        &:link,
+        &:visited {
+            color: inherit;
+            font: inherit;
+            text-decoration: none;
+        }
+
+        &:hover,
+        &:active {
+            color: blue;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__input {
+        width: 40%;
+        max-width: 30rem;
+    }
+}

@@ -1,0 +1,38 @@
+.section-gallery {
+    margin: 3rem auto;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+
+    &__image {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &-container {
+            position: relative;
+            width: 100%;
+            margin-bottom: 2rem;
+            animation: placeholderAnimation ease 1s infinite;
+        }
+    }
+}
+
+@keyframes placeholderAnimation {
+    0% {
+        background: #ddd;
+    }
+    50% {
+        background: #ccc;
+    }
+    100% {
+        background: #ddd;
+    }
+}
