@@ -9,7 +9,7 @@ import { Search } from "@material-ui/icons";
 
 // components
 import LoadIcon from "./utility/LoadIcon/LoadIcon";
-import { fetchPhotos } from "../actions";
+import { fetchPhotos, setTerm as setSearchTerm } from "../actions";
 
 function SearchForm() {
     const [term, setTerm] = useState("");
@@ -17,7 +17,10 @@ function SearchForm() {
 
     function onTermSubmit(event) {
         event.preventDefault();
+
+        dispatch(setSearchTerm(term));
         dispatch(fetchPhotos(term));
+
         setTerm("");
     }
 

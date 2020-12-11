@@ -8,6 +8,7 @@ import GalleryImage from "./GalleryImage";
 
 function Gallery(props) {
     const { photos, total, pages } = useSelector((state) => state.unsplash);
+    const term = useSelector((state) => state.term);
     console.log({ photos, total, pages });
 
     const renderPhotos = () => {
@@ -36,7 +37,18 @@ function Gallery(props) {
 
     return (
         <section className="section-gallery">
-            <div className="gallery">{renderPhotos()}</div>
+            {photos.length > 0 ? (
+                <>
+                    <h4 className="heading-4">
+                        Showing results for: <span className="search-term">{term}</span>
+                    </h4>
+                    <div className="gallery">{renderPhotos()}</div>
+                </>
+            ) : (
+                <h4 className="heading-4" style={{ textAlign: "center" }}>
+                    Please enter a search term
+                </h4>
+            )}
         </section>
     );
 }
