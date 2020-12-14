@@ -11,7 +11,7 @@ import reportWebVitals from "./reportWebVitals";
 
 const element = (
     <React.StrictMode>
-        <Router basename="/">
+        <Router basename="/snap-shot">
             <Provider store={store}>
                 <App />
             </Provider>

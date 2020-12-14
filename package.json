@@ -1,5 +1,6 @@
 {
     "name": "snap-shot",
+    "description": "SnapShot | An Image Gallery Project with React and Unsplash",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
@@ -44,5 +45,6 @@
     },
     "devDependencies": {
         "node-sass": "^4.14.1"
-    }
+    },
+    "homepage": "https://anik7303.github.io/snap-shot"
 }
