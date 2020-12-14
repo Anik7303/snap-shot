@@ -1,11 +1,15 @@
-function GalleryImage({ image }) {
+function GalleryImage(props) {
     const {
-        alt_description,
-        description,
-        urls: { small },
-        height,
-        width,
-    } = image;
+        image: {
+            alt_description,
+            description,
+            urls: { small },
+            height,
+            width,
+        },
+        select,
+    } = props;
+
     return (
         <div
             className="gallery__image-container"
@@ -15,7 +19,7 @@ function GalleryImage({ image }) {
                 className="gallery__image"
                 src={small}
                 alt={description || alt_description}
-                title={height}
+                onClick={() => select(props.image)}
             />
         </div>
     );
